@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+body.light {
+    --primary: #0A0A0B;
+    --secondary: #1EB5EB;
+
+    --primary-light: #303036;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+.wallpaper {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    background: linear-gradient(150.31deg, #E1E1E1 4.38%, #E7F8FF 98.01%);
+}
+nav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px 90px;
+    background-color: #FFFFFFC7;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 35px #00000026;
+}
+img {
+    object-fit: cover;
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+p, h1, h2, h4 {
+    margin: 0;
+}
+h1 {
+    /* font-size: 3vw; */
+    font-size: 40px;
+    font-weight: bold;
+}
+h4 {
+    /* font-size: 2vw; */
+    font-size: 28px;
+    font-weight: 600;
+}
+p {
+    /* line-height: 1.6vw; */
+    line-height: 20px;
+    /* font-size: 1.2vw; */
+}
+#usthb-logo > img {
+    height: 100%;
+}
+#links-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#links-row a {
+    transition-duration: .4s;
+}
+#links-row a:is(.active, :hover) {
+    color: var(--secondary);
+}
+#links-row a.active {
+    cursor: default;
+}
+section {
+    flex: 1;
+    overflow: hidden;
+}
