@@ -1,18 +1,19 @@
-let slideBars = Array.from(document.getElementsByClassName('slide-bar'));
+let progressBars = Array.from(document.getElementsByClassName('progress'));
 const currentPers = [0, 0, 0];
-const perDuration = 700;
+const perDuration = 1000;
 
-slideBars.forEach((slide, index) => {
-    const progressBar = slide.firstElementChild;
-    const target = parseInt(progressBar.dataset.target);
-    progressBar.style.width = target + '%';
+progressBars.forEach((bar, index) => {
+    const persent = bar.firstElementChild;
+    const target = parseInt(bar.dataset.target);
+    bar.style.width = target + '%';
+    persent.style.filter = 'opacity(1)'
     const perInterval = setInterval(() => {
         currentPers[index]++;
         if (currentPers[index] > target) {
-            slide.nextElementSibling.innerText = target + '%';
+            persent.innerText = target + '%';
             clearInterval(perInterval);
             return;
         }
-        slide.nextElementSibling.innerText = currentPers[index] + '%';
+        persent.innerText = currentPers[index] + '%';
     }, perDuration / target);
 });

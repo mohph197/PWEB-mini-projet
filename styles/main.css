@@ -10,13 +10,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
 }
 .layout {
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
     grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
     gap: 20px;
-    height: 75%;
+    height: 500px;
     width: 800px;
 }
 .content {
@@ -34,8 +35,7 @@ section {
     background-color: var(--secondary);
     color: white;
     padding: 10px;
-    /* font-size: 1.5vw; */
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 10px;
     box-shadow: 0px 4px 18px #00000040
 }
@@ -69,4 +69,25 @@ section {
 }
 #contacts img {
     height: 1.5em;
+}
+
+@media only screen and (max-width: 864px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
+        /* width: 80vw; */
+        height: fit-content;
+    }
+    #contacts {
+        grid-row-start: 2;
+        gap: 2vw;
+    }
+    .content {
+        grid-row: 3 / 4;
+        padding: 20px 5vw;
+    }
+    #contacts .contact {
+        font-size: 3vw;
+        padding: 0 7vw;
+    }
 }

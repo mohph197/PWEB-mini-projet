@@ -1,0 +1,75 @@
+.wallpaper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(0.2);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+}
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+    width: 800px;
+}
+.field {
+    position: relative;
+    background: linear-gradient(146.96deg, rgba(255, 255, 255, 0.8) -111.01%, rgba(255, 255, 255, 0.61) 206.68%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 35px #00000040;
+}
+.field h3 {
+    position: absolute;
+    top: -8%;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 20px #0000001a;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+.skill {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0px 9px 29px rgba(0, 0, 0, 0.18);
+}
+.skill img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.skill-separator {
+    height: 40px;
+    width: 2px;
+    background-color: var(--primary-light);
+    filter: opacity(0.5);
+}
+.skill-name, .skill img {
+    flex: 1;
+}
+.skill-name {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
