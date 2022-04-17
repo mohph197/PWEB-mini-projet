@@ -23,6 +23,7 @@ section {
 .content {
     border-radius: 15px;
     background-color: #FFFFFFC2;
+    backdrop-filter: blur(10px);
     grid-row-end: span 2;
     padding: 20px 50px;
     display: flex;
@@ -73,14 +74,15 @@ section {
 
 @media only screen and (max-width: 864px) {
     .layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
-        /* width: 80vw; */
+        width: 80vw;
         height: fit-content;
     }
     #contacts {
         grid-row-start: 2;
         gap: 2vw;
+        padding: 0 2vw;
     }
     .content {
         grid-row: 3 / 4;

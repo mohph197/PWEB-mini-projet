@@ -73,3 +73,19 @@ section {
     font-weight: 600;
     text-align: center;
 }
+@media only screen and (max-width: 864px) {
+    .layout {
+        width: 90vw;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media only screen and (max-width: 540px) {
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .field h3 {
+        top: -4%;
+    }
+}
